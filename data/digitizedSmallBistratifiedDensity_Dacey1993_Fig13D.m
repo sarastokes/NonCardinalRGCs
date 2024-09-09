@@ -11,7 +11,7 @@ function [pts, ptsLine] = digitizedSmallBistratifiedDensity_Dacey1993_Fig13D()
     plot(ptsLine(:,1), ptsLine(:,2),...
         'Color', [0.75 0.75 1], 'LineWidth', 2);
     plot(pts(:,1), pts(:,2), 'ob',...
-        'MarkerFaceColor'0, 'b');
+        'MarkerFaceColor', 'b');
     xlim([0 12]); ylim([0 10]);
     legend('Small bistratified RGC', 'Location', 'northwest');
     xlabel('Eccentricity (mm)'); % Temporal
@@ -19,6 +19,7 @@ function [pts, ptsLine] = digitizedSmallBistratifiedDensity_Dacey1993_Fig13D()
     grid on; axis square;
     tightfig(gcf);
 end
+
 function [dacey1993_Fig13D_data, dacey1993_Fig13D_line] = getData()
     % The data for macaque
     dacey1993_Fig13D_data = [

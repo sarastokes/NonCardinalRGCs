@@ -30,13 +30,13 @@ function [totalPct, midgetPct] = estimateLMConeMidgetRgcDensity(pS, pMidget)
 %
 % History:
 %   20Dec2023 - SSP
-% -------------------------------------------------------------------------
+% --------------------------------------------------------------------------
 
     arguments
-        pS      double      {mustBeInRange(pS, 0, 1)}
-        pMidget double      {mustBeInRange(pMidget, 0, 1)}
+        pS          double      {mustBeInRange(pS, 0, 1)}
+        pMidget     double      {mustBeInRange(pMidget, 0, 1)}
     end
 
-    pLM = 2 * (1 - pS);
-    midgetPct = pLM / (pLM + pS);
+    LM = 2 * (1 - pS);
+    midgetPct = LM / (LM + pS);
     totalPct = pMidget * midgetPct;

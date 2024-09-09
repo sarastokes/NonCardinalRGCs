@@ -1,12 +1,16 @@
 function [fitFcn, eqn] = createGaussSumFitFcn(numNeighbors)
 % CREATEGAUSSSUMFITFCN
 %
+% Syntax:
+%   [fitFcn, eqn] = createGaussSumFitFcn(numNeighbors)
+%
 %  Parameters that are determined by the data:
 %   - numNeighbors: the number of neighboring cells
 %   - x0y0: the xy coordinates of the center of each cell.
 %   - bkgd: the minimum value in the image
 %  Parameters that are fit:
 %   - a, sx: the amplitude and standard deviation of each Gaussian
+% --------------------------------------------------------------------------
 
     header = "@(";
     eqn = "";
